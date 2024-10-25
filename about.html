@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AGRA</title>
+    <link rel="icon" href="logo.png" type="image/jpg">
+    <!-- Bootstrap 5 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome 5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="AGRA Logo" width="70" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href ="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center">
+        <h1>About AGRA</h1>
+    </header>
+
+    <section class="container my-5">
+        <h2 class="section-title text-center">Company History</h2>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 fade-in">
+                <p>AGRA: A Legacy of Excellence in Agricultural Equipment. Founded with a passion for agriculture and a vision to revolutionize farming, AGRA has grown over the years into a trusted name in agricultural equipment. From our early days, we've been committed to empowering farmers by delivering top-quality tools and machinery that enhance efficiency, productivity, and sustainability on the field.</p>
+                <p>With decades of experience, AGRA combines the expertise of seasoned agricultural specialists and engineers who understand the unique demands of modern farming. Our team is dedicated to innovation, bringing state-of-the-art solutions that adapt to evolving agricultural needs. We are proud to support farmers around the world, offering equipment that is not only durable and effective but also designed with the latest advancements to meet the challenges of today and tomorrow.</p>
+                <p>AGRA's legacy continues as we lead in quality, reliability, and cutting-edge technology, always focusing on our mission: to cultivate success and resilience in every field we touch.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title text-center">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="value-title">Integrity</h3>
+                    <p>We conduct our business with the highest standards of professional behavior and ethics</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="value-title">Excellence</h3>
+                    <p>We strive for excellence in everything we do</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="value-title">Teamwork</h3>
+                    <p>We work together to achieve common goals</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="value-title">Innovation</h3>
+                    <p>We embrace new ideas and creative solutions</p>
+                </div>
+    
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="value-title">Sustainability</h3>
+                    <p>We are committed to sustainable agricultural practices and environmental responsibility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-4 text-light">
+        <div class="container text-center">
+            <p class="mb-3">&copy; 2024 AGRA Inc. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://github.com/yourprofile" target="_blank" class="text-light mx-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-light mx-2">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $(".fade-in").each(function() {
+                    if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 100) {
+                        $(this).addClass("visible");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

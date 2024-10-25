@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - AGRA</title>
+    <link rel="icon" href="logo.png" type="image/jpg">
+    <!-- Bootstrap 5 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome 5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="AGRA Logo" width="70" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">About</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href ="services.html">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Cart Toggle Button -->
+    <div class="cart-toggle" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </div>
+
+    <!-- Cart Container -->
+<div class="cart-container" id="cart-container">
+    <div class="cart-header">
+        <h4>Shopping Cart</h4>
+        <button class="close-cart" onclick="toggleCart()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="p-3">
+        <div id="cart-items"></div>
+        <div class="mt-3">
+            <strong>Total: $<span id="cart-total">0</span></strong>
+        </div>
+        <button class="btn btn-success mt-3 w-100" onclick="checkout()">Checkout</button>
+    </div>
+</div>
+
+    
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="swing.png" class="card-img-top" alt="Swing Machine 2654G">
+                    <div class="card-body">
+                        <h5 class="card-title">Swing Machine 2654G</h5>
+                        <p class="card-text">A robust, versatile machine designed for quick and efficient harvesting and material handling. With advanced maneuverability and ergonomic controls, the Swing Machine 2654G delivers top performance in any terrain.</p>
+                        <p><strong>Price: $18,000</strong></p>
+                        <button class="btn custom-btn-green" onclick="addToCart('Swing Machine 2654G', 18000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="sprayer.png" class="card-img-top" alt="Sprayer 410R">
+                    <div class="card-body">
+                        <h5 class="card-title">Sprayer 410R</h5>
+                        <p class="card-text">The 410R Sprayer combines precision with efficiency, allowing for targeted application of fertilizers and pesticides. With a high-capacity tank and adjustable spray settings, this sprayer ensures even coverage for all crop types.</p>
+                        <p><strong>Price: $22,000</strong></p>
+                        <button class="btn custom-btn-green" onclick="addToCart('Sprayer 410R', 22000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="loader.png" class="card-img-top" alt="4066M Heavy Duty Loader">
+                    <div class="card-body">
+                        <h5 class="card-title">4066M Heavy Duty Loader</h5>
+                        <p class="card-text">Built for demanding tasks, the 4066M Heavy Duty Loader offers impressive lifting power and enhanced stability. Ideal for soil work, hauling, and construction projects on the farm, it is a reliable choice for diverse fieldwork.</p>
+                        <p><strong>Price: $28,000</strong></p>
+                        <button class="btn custom-btn-green" onclick="addToCart('4066M Heavy Duty Loader', 28000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="harvester.jpg" class="card-img-top" alt="Swing Machine 2654G">
+                    <div class="card-body">
+                        <h5 class="card-title">Self-Propelled Forage Harvester</h5>
+                        <p class="card-text">This harvester is equipped with precision cutting tools and automated steering for optimal forage collection. Ideal for larger operations, it increases harvesting speed while maintaining quality and reducing crop losses.</p>
+                        <p><strong>Price: $60,000</strong></p>
+                        <button class="btn custom-btn-green" onclick="addToCart('Self-Propelled Forage Harvester', 60000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="tractor.jpg" class="card-img-top" alt="Swing Machine 2654G">
+                    <div class="card-body">
+                        <h5 class="card-title">4075R Row Crop Tractor</h5>
+                        <p class="card-text">Engineered for high-performance in row crop farming, the 4075R tractor offers exceptional fuel efficiency and powerful engine capacity. Equipped with user-friendly controls and customizable attachments.</p>
+                        <p><strong>Price: $45,000</strong></p>
+                        <button class="btn custom-btn-green" onclick="addToCart('4075R Row Crop Tractor', 45000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="planting.png" class="card-img-top" alt="Swing Machine 2654G">
+                    <div class="card-body">
+                        <h5 class="card-title">DR612 Planter</h5>
+                        <p class="card-text">The DR612 Planter offers precision planting technology for a variety of crop types. Its adjustable depth and spacing controls allow farmers to achieve consistent, high-yield planting results with ease.</p>
+                        <p><strong>Price: $15,000</strong></p>
+                        <button class="btn custom-btn-green" onclick="addToCart('DR612 Planter', 15000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-4 text-light">
+        <div class="container text-center">
+            <p class="mb-3">&copy; 2024 AGRA Inc. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://github.com/yourprofile" target="_blank" class="text-light mx-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-light mx-2">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let cart = [];
+        
+        function toggleCart() {
+            document.getElementById('cart-container').classList.toggle('active');
+        }
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+            showNotification(`${name} added to cart!`);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total');
+            
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <div>${item.name}</div>
+                        <div>$${item.price.toLocaleString()}</div>
+                        <i class="fas fa-times remove-item" onclick="removeFromCart(${index})"></i>
+                    </div>
+                `;
+            });
+
+            cartCount.textContent = cart.length;
+            cartTotal.textContent = total.toLocaleString();
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.bottom = '20px';
+            notification.style.right = '20px';
+            notification.style.backgroundColor = '#28a745';
+            notification.style.color = 'white';
+            notification.style.padding = '10px 20px';
+            notification.style.borderRadius = '5px';
+            notification.style.zIndex = '1000';
+            notification.textContent = message;
+
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            
+            alert('Thank you for your purchase! Our team will contact you soon.');
+            cart = [];
+            updateCart();
+            toggleCart();
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
